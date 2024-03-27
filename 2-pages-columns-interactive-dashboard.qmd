@@ -2,7 +2,7 @@
 title: "An interactive Dashboard with Penguins Data"
 format: 
     dashboard:
-        orientation: columns
+        orientation: columns # defining primary orientation
 ---
 
 ```{r}

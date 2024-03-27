@@ -4,7 +4,7 @@ format: dashboard
 ---
 
 ```{r, setup}
-#| include: false
+#| include: false # do not include this code chunk in the dashboard
 
 library(ggplot2)
 library(palmerpenguins)
@@ -22,11 +22,12 @@ penguin_df <- palmerpenguins::penguins
 This is a simple dashboard created with Quarto using penguins. 
 Data were collected and made available by Dr. Kristen Gorman and the Palmer Station, Antarctica LTER, a member of the Long Term Ecological Research Network.
 
+# Page 1
 
 ## Row 1
 
 ```{r}
-#| title: Penguin Scatter Plot
+#| title: Penguin Scatter Plot # this has to be the immediately next line to the '''{r} line otherwise won't work
 
 ggplot(data = penguin_df, aes(x = flipper_length_mm, y = body_mass_g)) + geom_point(aes(color = species)) +
     scale_color_manual(values = c(
@@ -85,5 +86,5 @@ ggplot(data = biscoe_sp, aes(x = species, y = count)) +
     theme_minimal() 
 ```
 
-
+# New Data
 
